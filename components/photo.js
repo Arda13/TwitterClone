@@ -4,10 +4,11 @@ import styles from './photo.module.css'
 
 function Photo({
   src = 'https://pbs.twimg.com/profile_images/1147287093682589696/f3NBbffV_400x400.jpg',
-  alt
+  alt,
+  size = 47
 }) {
   return (
-    <div className={cn([styles.photo])}>
+    <div className={cn([styles.photo])} style={{ width: size, height: size }}>
       <img className={styles.img} src={src} alt={alt}></img>
     </div>
   )
